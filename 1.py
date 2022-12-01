@@ -12,7 +12,10 @@ for line in data:
     else:
         elf = int(line.strip()) + elf
 elves.sort()
+elves_len = len(elves)
 
-print( elves[len(elves)-1]) # print last elfs calories carries
+# last elfs calories carried
+print( f"Top elf calories: {elves[elves_len-1]}" )
 
-print(elves[len(elves)-1] + elves[len(elves)-2] + elves[len(elves)-3])
+# sum of last 3 elves
+print( f"Top 3 elfs calories: {elves[elves_len-1] + elves[elves_len-2] + elves[elves_len-3]}")
