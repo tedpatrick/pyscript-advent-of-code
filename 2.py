@@ -10,7 +10,7 @@ PAPER = 2
 SIZZORS = 3
 
 # A X = Rock = 1
-# B Y = Paper = 2 
+# B Y = Paper = 2
 # C Z = Sizzors = 3
 
 total = 0
@@ -21,16 +21,16 @@ for line in data:
 
     elif line == "A Y\n":
         total = total + WIN + PAPER
-        
+
     elif line == "A Z\n":
         total = total + LOSS + SIZZORS
-    
+
     elif line == "B X\n":
         total = total + LOSS + ROCK
 
     elif line == "B Y\n":
         total = total + TIE + PAPER
-        
+
     elif line == "B Z\n":
         total = total + WIN + SIZZORS
 
@@ -42,17 +42,17 @@ for line in data:
 
     elif line == "C Z\n":
         total = total + TIE + SIZZORS
-    
+
     else:
         raise Exception("Invalid input")
 
-print( f"Part 1 total: {total}" )
+print(f"Part 1 total: {total}")
 
 # X = LOSS
 # Y = TIE
 # Z = WIN
 # A = Rock = 1
-# B = Paper = 2 
+# B = Paper = 2
 # C = Sizzors = 3
 
 data = open_url("2.txt")
@@ -65,16 +65,16 @@ for line in data:
 
     elif line == "A Y\n":
         total = total + TIE + ROCK
-        
+
     elif line == "A Z\n":
         total = total + WIN + PAPER
-    
+
     elif line == "B X\n":
         total = total + LOSS + ROCK
 
     elif line == "B Y\n":
         total = total + TIE + PAPER
-        
+
     elif line == "B Z\n":
         total = total + WIN + SIZZORS
 
@@ -86,8 +86,8 @@ for line in data:
 
     elif line == "C Z\n":
         total = total + WIN + ROCK
-    
+
     else:
         raise Exception("Invalid input")
 
-print( f"Part 2 total: {total}" )
+print(f"Part 2 total: {total}")

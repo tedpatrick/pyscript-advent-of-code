@@ -15,7 +15,9 @@ elves.sort()
 elves_len = len(elves)
 
 # last elfs calories carried
-print( f"Top elf calories: {elves[elves_len-1]}" )
+print(f"Top elf calories: {elves[elves_len-1]}")
 
 # sum of last 3 elves
-print( f"Top 3 elfs calories: {elves[elves_len-1] + elves[elves_len-2] + elves[elves_len-3]}")
+print(
+    f"Top 3 elfs calories: {elves[elves_len-1] + elves[elves_len-2] + elves[elves_len-3]}"
+)
