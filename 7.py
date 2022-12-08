@@ -27,31 +27,31 @@ with open_url("7.txt") as f:
                 filesize += int(parts[0])
                 dirs["_".join(path)] = filesize
 
-tdir={}
+tdir = {}
 for d in dirs:
     tdir[d] = dirs[d]
     for e in dirs:
         if d == e:
             continue
         elif e.startswith(d):
-            tdir[d]+=dirs[e]
+            tdir[d] += dirs[e]
 
 
-total=0
+total = 0
 for d in tdir:
     if tdir[d] < 100000:
         total += tdir[d]
 
-print( f"Part 1 total: {total}" )
+print(f"Part 1 total: {total}")
 
 
 free = 70000000 - tdir["/"]
 need = 30000000 - free
-#print(need,free)
+# print(need,free)
 
 candidates = []
 for d in tdir:
     if tdir[d] > need:
         candidates.append(tdir[d])
 candidates.sort()
-print( f"Part 2 total: {candidates[0]}" )
+print(f"Part 2 total: {candidates[0]}")
